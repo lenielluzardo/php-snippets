@@ -7,45 +7,72 @@
   <title>Leniel Luzardo</title>
 </head>
 <body>
+<!-- --# # # # # # # # # # # # # # #-- -->
+  <!-- S I T E   H E A D E R -->
+
   <header class="header">
-    <div class="logo-wrapper">
+    <div class="header-container">
       <img class="logo" src="./assets/logo.svg" alt="logo">
-      <h1 class="web_title">Leniel Luzardo</h1>
-      <img class="hamb_icon" src="./assets/hamb_icon.svg" alt="logo">
+      <h1 class="title">Leniel Luzardo</h1>
+      <img class="nav_icon" src="./assets/hamb_icon.svg" alt="logo">
     </div>
 
+
+    <!-- N A V I G A T I O N   M E N U  -->
+    <nav class="nav_menu hide">
     
-    <nav class="nav_menu">
-      <ul class="nav_menu-list">
-        <li><a href="">Blog</a></li>
-        <li><a href="animation.html">Animation</a></li>
-        <li><a href="">Illustration</a></li>
-        <li><a href="">Software Development</a></li>
-        <li><a href="">Weird Stuff</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
+      <section class="nav-web_components">
+      <ul>
+        <li class="nav-item nav-button"><a href="">Blog</a></li>
+        <li class="nav-item nav-button"><a href="animation.html">Animation</a></li>
+        <li class="nav-item nav-button"><a href="">Illustration</a></li>
+        <li class="nav-item nav-button"><a href="">Software Development</a></li>
+        <li class="nav-item nav-button"><a href="">Weird Stuff</a></li>
+        <li class="nav-item nav-button"><a href="">About</a></li>
+        <li class="nav-item nav-button"><a href="">Contact</a></li>
       </ul>
+      </section>
+      <section class="nav-social_media">
+        <ul>
+          <li class="nav-item" ><a href="">Behance</a></li>
+          <li class="nav-item" ><a href="">GitHub</a></li>
+          <li class="nav-item" ><a href="">Yotube</a></li>
+          <li class="nav-item" ><a href="">Instagram</a></li>
+          <li class="nav-item" ><a href="">Twitter</a></li>
+        </ul>
+      </section>
     </nav>
   </header>
 
-<!--####### MAIN ########-->
+  <!-- --# # # # # # # # # # # # # # #-- -->
 
+  <!-- M A I N    C O N T E N T  -->
+
+  <!-- M O S T   R E C E N T   P O S T -->
   <main class="main">
-    <section class="recent_post-wrapper">
+    <section class="most_recent_post">
       <h2 class="section_title">Most Recent Post:</h2>
-      
-      <article class="post">
-        <h2 class="post_title">
+      <hr>
+
+      <article class="most_recent-post">
+        <h2 class="most_recent-post_title">
           All you must know about software development
         </h2>
-        <p class="post_author">By: Leniel Luzardo</p>
-        <p class="post_date">December 20th, 2020</p>
-        <div class="post_rating">
+      
+        <p class="most_recent-post_author">By: Leniel Luzardo</p>
+        <p class="most_recent-post_date">December 20th, 2020</p>
+      
+        <div class="most_recent-post_rating">
         </div>
-        <div class="post_img-wrapper">
-          <img class="post_img" src="https://via.placeholder.com/250" alt="post image">
+      
+        <div class="most_recent-post_tags">
+          <span class="tag"><a href="">.NET Core</a></span>
+          <span class="tag"><a href="">.NET Core</a></span>
+          <span class="tag"><a href="">.NET Core</a></span>
         </div>
-        <p class="post_content">
+          <img class="most_recent-post_img" src="https://via.placeholder.com/250" alt="post image">
+       
+        <p class="most_recent-post_content">
           Lorem ipsum dolor sit amet consectetur adipisicing
           elit. A voluptates tenetur quibusdam explicabo nobis
           eum aperiam impedit, libero architecto consequuntur 
@@ -70,43 +97,45 @@
           facilis eos!
         </p>
       </article>
-      <button class="post_button">Read it!</button>
+      <button class="most_recent-post_button button">Read it!</button>
     </section>
-
+  
+  
+    <!-- R E L A T E D   P O S T S -->
     <section class="related_posts">
       <h2 class="section_title">Related Posts:</h2>
-      <div class="related_posts-list_wrapper">
-            <div class="post_wrapper">
-              <h3>Other post 1</h3>
+      <hr>
+      <div class="related_posts-list">
+            <div class="post-container">
+              <h3 class="post_title">Other post 1</h3>
               <img class="post_img" src="https://via.placeholder.com/150" alt="post image">
             </div>
-            <div class="post_wrapper">
-              <h3>Other post 2</h3>
+            <div class="post-container">
+              <h3 class="post_title">Other post 1</h3>
               <img class="post_img" src="https://via.placeholder.com/150" alt="post image">
             </div>
-            <div class="post_wrapper">
-              <h3>Other post 3</h3>
+            <div class="post-container">
+              <h3 class="post_title">Other post 1</h3>
               <img class="post_img" src="https://via.placeholder.com/150" alt="post image">
             </div>
-            <div class="post_wrapper">
-              <h3>Other post 4</h3>
+            <div class="post-container">
+              <h3 class="post_title">Other post 1</h3>
+              <img class="post_img" src="https://via.placeholder.com/150" alt="post image">
+            </div>
+            <div class="post-container">
+              <h3 class="post_title">Other post 1</h3>
               <img class="post_img" src="https://via.placeholder.com/150" alt="post image">
             </div>
       </div>
     </section>
   </main>
 
+  <!-- F O O T E R -->
   <footer class="footer">
-    <nav class="footer_nav">
-      <ul>
-        <li><a href="">Behance</a></li>
-        <li><a href="">GitHub</a></li>
-        <li><a href="">Yotube</a></li>
-        <li><a href="">Instagram</a></li>
-        <li><a href="">Twitter</a></li>
-      </ul>
-    </nav>
+    <button class="button">Contact me</button>
+    <span class="copyrights">Leniel Luzardo &copy 2020 | All rights reserved</span>
   </footer>
+
 
   <script src="./js/index.js"></script>
 </body>

@@ -1,11 +1,15 @@
-let navMenu = document.querySelector('.nav_menu-list');
-let hambIcon = document.querySelector('.hamb_icon').addEventListener("click", e => {
+let navMenu = document.querySelector('.nav_menu');
+let navIcon = document.querySelector('.nav_icon').addEventListener("click", e => {
 
-  if(!navMenu.classList.contains('show_menu')){
-  navMenu.classList.add('show_menu');
+console.log(navMenu);
+
+  if(navMenu.classList.contains('hide')){
+    navMenu.classList.remove('hide');
 }
 else {
-  navMenu.classList.remove('show_menu');
+  navMenu.classList.add('hide');
+
+
 }
 
 });
