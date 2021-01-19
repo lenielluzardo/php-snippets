@@ -2,14 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap');
 
 /* <!-- --# # # # # # # # # # # # # # #-- -->
-    <!-- G E N E R A L   B O D Y   R U L E S --> */
+ 
+<!-- G E N E R A L   B O D Y   R U L E S --> */
 html, body{
   height: 100%;
   font-family: 'Pragati', 'Helvetica', sans-serif;
   background-color: #E5F0FC ;
 }
  /* <!-- --# # # # # # # # # # # # # # #-- -->
-  /*<!-- G R I D   B O D Y   R U L E S --> */
+ 
+ /*<!-- G R I D   B O D Y   R U L E S --> */
  body{
     display: grid;
     grid: 1fr auto / 1fr;
@@ -17,6 +19,7 @@ html, body{
  }
 
  /* <!-- --# # # # # # # # # # # # # # #-- -->
+
     <!-- S I T E   H E A D E R --> */
 
 .header{              
@@ -30,7 +33,7 @@ html, body{
 }
 .header-container{
   display: grid;
-  grid: auto / .2fr 1fr .2fr;
+  grid-template: auto / auto 1fr 40px;
   grid-column-gap: 1em;
   padding: 1em;
   align-items: center;
@@ -38,6 +41,9 @@ html, body{
 .title{
   margin: 0;
 }
+
+  /* <!-- N A V I G A T I O N   M E N U -->  */
+
 .nav_icon{
   width: 40px;
 }
@@ -85,6 +91,7 @@ html, body{
 }
 
 /* <!-- --# # # # # # # # # # # # # # #-- -->
+
    <!-- M A I N   C O N T E N T  --> */
 
 .main{
@@ -96,27 +103,26 @@ html, body{
   background-color: #FEFEFE;
 } 
 
-/* <!-- --# # # # # # # # # # # # # # #-- -->
-   <!-- M O S T   R E C E N T   P O S T  --> */
 
-.most_recent_post{
+/*  <!-- M O S T   R E C E N T   P O S T  --> */
+
+.most_recent{
   padding: 1em;
 }
 .section_title{
   font-style: italic;
   letter-spacing: 2px;
 }
-.most_recent-post_title{
-  margin: 0 0 .5em 0;
+.post_title{
+  margin: 0 0 20px 0;
 }
-.most_recent-post_author{
-  font-size: 1.1em;
-  font-weight: bold;
-  margin: 0 0 .5em 0;
+.post_author{
+  margin: 0 0 5px 0;
+
 }
-.most_recent-post_date{
-  font-size: .9em;
-  margin: 0 0 .5em 0;
+.post_date{
+  font-weight: normal;
+  margin: 0 0 5px 0;
 }
 .tag > a{
   display: inline-block;
@@ -129,11 +135,12 @@ html, body{
   color: #0E1C27;
 
 }
-.most_recent-post_img{
+.post_img{
   width: 100%;
   margin: 1em 0;
 }
-.most_recent-post_content{
+
+.post_body{
   text-align: justify;
   margin: 0;
 }
@@ -148,21 +155,21 @@ html, body{
   width: 100%;
 }
 
-/* <!-- --# # # # # # # # # # # # # # #-- -->
-   <!-- R E L A T E D   P O S T S  --> */
 
-.related_posts{
+/* <!-- R E L A T E D   P O S T S  --> */ 
+
+.related{
   overflow: hidden;
   width: 90vw;
   padding: 1em;
   text-align: center;
 }
-.related_posts-list{
+.related-list{
   display:flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory
 }
-.post-container{
+.related-item{
   width: 150px;
   margin: 0 1em;
 }
@@ -170,13 +177,86 @@ html, body{
 /* <!-- --# # # # # # # # # # # # # # #-- -->
    <!-- F O O T E R  --> */
 
-   .footer {
-     grid-row: 3;
-     padding: 1em;
-     background-color: #FEFEFE;
-   }
-   .copyrights{
-     display: inline-block;
-     font-size: .8em;
-     margin: .5em;
-   }
+.footer {
+  grid-row: 3;
+  padding: 1em;
+  background-color: #FEFEFE;
+}
+.copyrights{
+  display: inline-block;
+  font-size: .8em;
+  margin: .5em;
+}
+
+/* <!-- --# # # # # # # # # # # # # # #-- -->
+   <!-- M E D I A   Q U E R I E S  --> */
+
+@media screen and (min-width:560px){
+  .main{
+    font-size: 1.1em;
+  }
+  .most_recent, .related{
+    padding: 3em;
+  }
+  .post_meta{
+    display: grid;
+    grid-template: "author rating"
+                   "date   tags";
+  }
+  .post_author{
+    grid-area: author;
+  }
+  .post_date{
+    grid-area: date;
+  }
+  .post_rating{
+    text-align: end;
+    grid-area: rating;
+  }
+  .post_tags{
+    text-align: end;
+    grid-area:tags;
+  }
+  .post_body{
+    display: flex;
+  }
+  .post_img{
+    margin: 1em;
+    width: 300px;
+  }
+}
+@media screen and (min-width: 760px){
+  body{
+    display: grid;
+    grid: 'nav main'
+          'nav footer';
+    grid-gap: 5em / 0; 
+  }
+ .nav_icon{
+    display: none;
+  }
+ .header{
+    position: fixed; 
+    width: initial;
+    height: 100% ;
+    grid-area: nav;
+
+  }
+  .nav_menu{
+   display: initial;
+  }
+ .main{
+    /* overflow-y: scroll; */
+    position: relative;
+    padding: 100px;
+    justify-self: end;
+    height: 100vh;
+    grid-area: main;
+  }
+  .body_container{
+    max-width: 1000px;
+  }
+ .footer{
+    grid-area:footer;
+  }
+}
