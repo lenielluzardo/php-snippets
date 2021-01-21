@@ -3,13 +3,10 @@ let navIcon = document.querySelector('.nav_icon').addEventListener("click", e =>
 
 console.log(navMenu);
 
-  if(navMenu.classList.contains('hide')){
-    navMenu.classList.remove('hide');
+  if(navMenu.classList.contains('hidden')){
+    navMenu.classList.remove('hidden');
 }
 else {
-  navMenu.classList.add('hide');
-
-
+  navMenu.classList.add('hidden');
 }
-
 });
