@@ -1,16 +1,25 @@
-let navMenu = document.querySelector('.nav_menu');
-let navIcon = document.querySelector('.nav_icon');
+let navMenu = document.getElementById('nav-menu');
+let navIcon = document.getElementById('nav-icon');
+let header = document.getElementById('header-container');
 
-console.log(navIcon);
 
-navIcon.addEventListener("click", e => {
+navIcon.addEventListener("click", showNavMenu);
+
+function showNavMenu(){
+  // alert("I'm working");
 
   if(navMenu.classList.contains('hidden')){
+    
     navMenu.classList.remove('hidden');
-    navIcon.src='../assets/x_button.svg';
+    header.style.position = "fixed";
+    header.style.width = "100%";
+    navIcon.src='../assets/x-icon.svg';
   }
-else {
-  navMenu.classList.add('hidden');
-  navIcon.src='./assets/hamb_button.svg';
+  else {
+    navMenu.classList.add('hidden');
+    header.style.position = "sticky";
+    navIcon.src='./assets/nav-icon.svg';
+  }
 }
-});
+
+
