@@ -4,7 +4,9 @@
 /* <!-- --# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #-- -->
  
 <!-- =================== G E N E R A L   B O D Y   R U L E S =================== --> */
-
+.hidden{
+  display: none;
+}
 html, body{
   font-family: 'Pragati', 'Helvetica', sans-serif;
   height: 100%;
@@ -180,11 +182,11 @@ html, body{
 }
 /*<!-- =================== R E L A T E D   S E C T I O N =================== --> */
 
-.related{
+#related{
   overflow: hidden;
   text-align: center;
 }
-.p_related-list{
+#p_related-list{
   display:flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory
@@ -225,7 +227,7 @@ html, body{
     font-size: 1.4em ;
   }
   #body-container{
-    font-size: 1.4em;
+    font-size: 1.3em;
     padding: 2em;
   }
   #p_title{
@@ -252,15 +254,22 @@ html, body{
   }
   #p_body{
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   #p_img{
     width: 50%;
   }
 }
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px)  {
   body{
     display: grid;
     grid-template: 'nav body';
+    width: 97%;
+    overflow-x: hidden;
+  }
+  .hidden{
+    display: block;
   }
   #logo-type{
     font-size: 2em;
@@ -278,6 +287,7 @@ html, body{
     min-width: 270px;
     height: 100%;
     overflow: hidden;
+    font-size: .9em;
   }
   #header-mobile{
     justify-content: center;
@@ -292,20 +302,47 @@ html, body{
   #body-container{
     grid-area: body;
     overflow-y: scroll;
-    margin: 0 0 0 20px;
-    padding: 50px 150px; 
+    margin: 0 0 0 40px;
+    padding: 50px 50px 50px 100px; 
   }
-  #back_button-container{
+  #main{
+    width: 95%;
+  }
+  .section{
+    margin: 0 0 100px 0;
+  }
+  #back-button-container{
     width:100%;
     text-align: left;
   }
-  #back_button{
+  #back-button{
     display: block;
   }
-  #p_img{
-    width: initial;
+  #p_body{
+  flex-direction: column;
+  }
+  .button{
+    grid-area:button;
+    width: 60%;
+  }
+  #p_related-list{
+    overflow:initial;
+    scroll-snap-type:none;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1500px){
+  #body-container{
+    width: 89%;
   }
   #p_body{
-    display: flex;
+    display:grid;
+    grid-template: 'img content' 
+                   'img button';
+    grid-gap:20px 30px;    
+  }
+  #p_img-container{
+    grid-area:img;
+    min-width: 450px;
   }
 }
