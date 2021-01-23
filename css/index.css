@@ -125,9 +125,6 @@ html, body{
   box-shadow: rgb(0, 0, 0,.5) 0px 0px 30px 1px;
   padding: 20px;
 } 
-#main{
-  /* height: 80vh; */
-}
 #back-button-container{
   display:none
 }

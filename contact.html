@@ -75,16 +75,16 @@
 
   <main id="main">
     <div id="contact-container">
-      <form id="contact" action="contac-form.php" method="POST">
+      <form id="contact" action="contact.php" method="POST">
 
         <label class="f_lbl" for="fullname">Fullname</label>
-        <input class="f_field" id="fullname" type="text">
+        <input class="f_field" id="fullname" name="fullname" type="text">
         
         <label class="f_lbl" for="email">Email</label> 
-        <input class="f_field" id="email" type="text"> 
+        <input class="f_field" id="email" name="email" type="text"> 
   
         <label class="f_lbl" for="subject">Subject</label>
-        <select class="f_field" id="subject"  type="select" name="subject[]">
+        <select class="f_field" id="subject" type="select" name="subject[]">
         
           <option value="Job Offer">Job Offer</option>
           <option value="Request a Commission">Request a Commission</option>
@@ -102,10 +102,13 @@
         
         </select>
   
-        <textarea id="comments" name="comments" value="" placeholder="Leave a message..."></textarea> 
+        <textarea id="comments" name="comments" value="" placeholder="Leave a datailed message please..."></textarea> 
   
-        <input id="news" class="f_chk" type="checkbox"> <label for="news">Subscribe to newsletter</label> <br>
-        <input id="not_a_robot" class="f_chk" type="checkbox"> <label for="not_a_robot"> I'm not a robot</label> <br>
+        <input id="news" class="f_chk" type="checkbox" name="newsletter" value="true"> 
+        <label for="news">Subscribe to newsletter</label> <br>
+        
+        <input id="not_a_robot" class="f_chk" type="checkbox" name="is_human" value="true">
+        <label for="not_a_robot" > I'm not a robot</label> <br>
  
         <div class="submit-container">
           <input type="submit" name="f_button" id="f_button" class="button" value="¡Send!">

@@ -43,15 +43,17 @@ if(isset($_POST['f_button'])){
     $newsletter=htmlspecialchars($_POST['newsletter'], ENT_QUOTES);
     $isHuman=htmlspecialchars($_POST['is_human'], ENT_QUOTES);
 
-  echo($fullname.PHP_EOL);
-  echo($email.PHP_EOL);
-  echo($subject.PHP_EOL);
-  echo($discipline.PHP_EOL);
-  echo($comments.PHP_EOL);
-  echo($newsletter.PHP_EOL);
-  echo($isHuman.PHP_EOL);
+  echo $fullname.'<br>';
+  echo $email.'<br>';
+  echo $subject.'<br>';
+  echo $discipline.'<br>';
+  echo $comments.'<br>';
+  echo $newsletter.'<br>';
+  echo $isHuman.'<br>';
 
-    // mail($to, $subject.' on '.$discipline, $comments, $emai,)
+  $headers = "From: $email"
+
+    mail($to, $subject.' on '.$discipline, $comments, $email,)
   }
   
 }
