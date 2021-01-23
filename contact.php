@@ -26,9 +26,6 @@ if(isset($_POST['f_button'])){
   if(!isset($_POST['comments']) || $_POST['comments'] === ''){
     $isValid=false;
   }
-  if(!isset($_POST['newsletter']) || $_POST['newsletter'] === ''){
-    $isValid=false;
-  }
   if(!isset($_POST['is_human']) || $_POST['is_human'] === ''){
     $isValid=false;
   }
@@ -51,9 +48,10 @@ if(isset($_POST['f_button'])){
   echo $newsletter.'<br>';
   echo $isHuman.'<br>';
 
-  $headers = "From: $email"
+  $headers = "From: $email\r\n"."Reply-To: $email\r\n"."X-Mailer: PHP/".phpversion();
+  $title = "$subject on $discipline";
 
-    mail($to, $subject.' on '.$discipline, $comments, $email,)
+  mail($to, $title, $comments, $headers);
   }
   
 }
