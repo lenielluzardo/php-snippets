@@ -80,17 +80,14 @@ html, body{
 #nav-components > ul,
 #nav-social > ul {
   padding: 0;
-  list-style: none;
   text-align: center;
 }
 .nav-component {
-  display: block;
-  padding: .5em;
+  padding: 5px;
   width: 85%;
   border-radius: 0 1em 1em 0;
   background: linear-gradient(.2turn,#004564,#71E7F5);
   margin-bottom: 10px;
-  font-size: 1.2em;
 }
 .nav-component:hover{
   cursor: pointer;
@@ -101,19 +98,16 @@ html, body{
 }
 #nav-components > ul > a{
   position: static;
-  /* margin-left: 15%; */
   font-weight: bold;
   text-decoration: none;
   color: #FEFEFE
 }
 .nav-item{
-  margin:10px;
+  margin:5px;
 }
 .nav-item > a {
   text-decoration: none;
   color: inherit;
-  display: inline;
-  position: relative;
 }
 /* <!-- --# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #-- -->
 
@@ -203,6 +197,7 @@ html, body{
 /*<!-- =================== F O O T E R =================== --> */
 
 #footer {
+  /* display: block; */
   text-align: center;
 }
 .copyrights{
@@ -324,13 +319,11 @@ html, body{
     grid-column: 1;
     position: sticky; 
     left:0;
-    /* min-width: 400px; */
-    /* height: 100%; */
     overflow: hidden;
     font-size: 1.1em;
   }
   #header-mobile{
-    justify-content: center;
+    /* justify-content: center; */
   }
   #logotype-container{
     align-items: center;
@@ -347,7 +340,7 @@ html, body{
   }
   #main{
     width: 95%;
-    height: 85%;
+    /* height: 85%; */
   }
   .section{
     margin: 0 0 100px 0;
