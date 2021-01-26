@@ -11,13 +11,11 @@ html, body{
   font-family: 'Pragati', 'Helvetica', sans-serif;
   height: 100%;
   min-width: 320px;
-  
   background-color: #E5F0FC;
 }
 /* <!-- --# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #-- -->
 
 <!-- =================== L A N D S C A P E  =================== --> */
-
 .overlay{
   position: fixed;
   background-color: rgba(14, 28, 39, 0.7);
@@ -38,13 +36,17 @@ html, body{
 /* <!-- --# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #-- -->
 
 <!-- =================== S I T E   H E A D E R =================== --> */
-
 #header-container{              
   position: sticky;
   top:0;
+  min-width: 320px;
   background: linear-gradient(0.2turn,#0E1C27, #0A1C47);
   color: #E5F0FC;
   box-shadow: rgb(0, 0, 0, .5) 0px 1px 5px 2px;
+}
+#homepage-link{
+  text-decoration: none;
+  color:inherit;
 }
 #header-mobile{
   display:flex;
@@ -112,21 +114,23 @@ html, body{
 /* <!-- --# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #-- -->
 
 <!-- =================== M A I N   C O N T E N T =================== --> */
-
-#body-container{
+#main-container{
   color: #0E1C27;
   background-color: #FEFEFE;
   box-shadow: rgb(0, 0, 0,.5) 0px 0px 30px 1px;
-  padding: 20px;
+  padding: 15px;
 } 
 #back-button-container{
   display:none
 }
 /*<!-- =================== M O S T   R E C E N T   S E C T I O N ================== --> */
-.section{
-  margin: 0 0 50px 0;
+.sections-container{
+  width: 100%;
 }
-.section_title{
+.section-container{
+  margin: 25px 0;
+}
+.section-title{
   margin: 0;
 }
 .section-separator{
@@ -155,11 +159,15 @@ html, body{
   font-weight: bold;
   color: #0E1C27;
 }
-#p_img-container{
+.p_img-container{
+  overflow: hidden;
   text-align: center;
   margin: 10px 0;
 }
-#p_paragraphs{
+.p_img{
+  object-fit: cover;
+ }
+#p_description{
   text-align: justify;
 }
 .button-container{
@@ -179,25 +187,27 @@ html, body{
 
 #related{
   overflow: hidden;
-  text-align: center;
 }
-#p_related-list{
+.related-list{
   display:flex;
+  list-style: none;
+  padding: 0;
   overflow-x: auto;
   scroll-snap-type: x mandatory
 }
-.p_related-title{
-  margin: 0 0 10px 0;
+.related-item{
+  width: 200px;
+  margin: 0 10px;
 }
-.p_related{
-  width: 150px;
-  margin: 0 20px 0 0;
+.related-title{
+  text-align: center;
+  margin: 0 0 10px 0;
+
 }
 /* <!-- --# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #-- -->
 /*<!-- =================== F O O T E R =================== --> */
 
 #footer {
-  /* display: block; */
   text-align: center;
 }
 .copyrights{
@@ -262,9 +272,12 @@ html, body{
   .nav-item{
     font-size: 1.4em ;
   }
-  #body-container{
+  #main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 1.3em;
-    padding: 2em;
+    padding: 50px;
   }
   #p_title{
     margin: 30px 0;
@@ -288,20 +301,15 @@ html, body{
     text-align: end;
     grid-area:tags;
   }
-  #p_body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  #p_img{
-    width: 50%;
+}@media screen and (min-width: 800px){
+  .sections-container{
+    width: 90%;
   }
 }
-@media screen and (min-width: 1024px)  {
+@media screen and (min-width: 1280px)  {
   body{
     display: grid;
     grid-template: 1fr / 350px repeat(5, 1fr);
-    width: 97%;
     overflow-x: hidden;
   }
   .hidden{
@@ -323,7 +331,7 @@ html, body{
     font-size: 1.1em;
   }
   #header-mobile{
-    /* justify-content: center; */
+    justify-content: center;
   }
   #logotype-container{
     align-items: center;
@@ -332,38 +340,32 @@ html, body{
   #nav-menu{
     height: 90%;
   }
-  #body-container{
+  #main-container{
     grid-column: 2 / 7;
     overflow-y: scroll;
     margin: 0 0 0 40px;
-    padding: 50px 50px 50px 100px; 
-  }
-  #main{
-    width: 95%;
-    /* height: 85%; */
-  }
-  .section{
-    margin: 0 0 100px 0;
   }
   #back-button-container{
+    display: block;
     width:100%;
     text-align: left;
+    position: sticky;
+    left:0;
+    top:0;
   }
-  #back-button{
-    display: block;
-  }
-  #p_body{
-  flex-direction: column;
+  .sections-container{
+    width: 75%;
   }
   .button{
     font-size: 1.2em;
     grid-area:button;
     width: 60%;
   }
-  #p_related-list{
+  .related-list{
     overflow:initial;
     scroll-snap-type:none;
     flex-wrap: wrap;
+    justify-content: center;
   }
   #contact-container{
     width: 50%;
@@ -372,17 +374,9 @@ html, body{
   }
 }
 @media screen and (min-width: 1500px){
-  #body-container{
-    width: 89%;
-  }
-  #p_body{
+  .mr{
     display:grid;
-    grid-template: 'img content' 
-                   'img button';
-    grid-gap:20px 30px;    
-  }
-  #p_img-container{
-    grid-area:img;
-    min-width: 450px;
+    grid-template: 1fr / 1fr 1fr;
+    grid-column-gap: 40px;
   }
 }

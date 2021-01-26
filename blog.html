@@ -17,13 +17,12 @@
 
     <!-- ====================== L O G O T Y P E   &   N A V   I C O N ====================== -->
     <div id="header-mobile">
-      <div id="logotype-container">
-        <a href="index.html"></a>
+      <a id="homepage-link" href="index.html">
+       <div id="logotype-container">
           <img id="logo-icon" src="./assets/logo.svg" alt="logo">
           <h1 id="logo-type">Leniel Luzardo</h1>
-       </a>
-      </div>
-
+       </div>
+      </a>
       <img id="nav-icon" src="./assets/nav-icon.svg" alt="navigation">
     </div>
 
@@ -66,21 +65,20 @@
 <!-- --# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #-- -->
 
 
-<div id="body-container">
+<main id="main-container">
   
   <div id="back-button-container">
     <img id="back-button" src="./assets/back_button.svg" alt="backward">
   </div>
-  
-  <main id="main">
+  <div class="sections-container">
 
-<!-- ====================== M O S T   R E C E N T   P U B L I C A T I O N ====================== -->
-
-    <section id="most_recent" class="section">
-      <h2 class="section_title">Most Recent Post:</h2>
+    <!-- ====================== M O S T   R E C E N T   P U B L I C A T I O N ====================== -->
+    <section class="section-container">
+      
+      <h2 class="section-title">Most Recent Post:</h2>
       <hr class="section-separator">
 
-      <article id="p_">
+      <article class="p_container">
         <section id="p_header">
 
           <h2 id="p_title">
@@ -111,13 +109,13 @@
        
         </section>
 
-        <section id="p_body">
+        <section class="p_body mr">
 
-          <div id="p_img-container">
-            <img id="p_img" src="https://via.placeholder.com/250" alt="image">
+          <div class="p_img-container">
+            <img id="p_img" src="https://via.placeholder.com/500x400" alt="publication_img">
           </div>
           
-          <div id="p_paragraphs">
+          <div id="p_description">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing
               elit. A voluptates tenetur quibusdam explicabo nobis
@@ -136,85 +134,101 @@
               laborum dolor nam autem. Ullam cumque quas ipsam 
               facilis eos!
             </p>
-          </div>
 
-          <div class="button-container">
-            <button class="button">¡Read it!</button>
-          </div>
+            <div class="button-container">
+              <button class="button">¡Read it!</button>
+            </div>
+        
+        </div>
+
 
         </section>
       </article>
 
       
     </section>
-    
-<!--  ====================== R E L A T E D   P U B L I C A T I O N  ====================== -->
-  
-    <section id="related" class="section">
+
+    <!--  ==================== R E L A T E D   P U B L I C A T I O N  ====================== -->
+    <section class="section-container related">
       
       <h2 class="section_title">Related Posts:</h2>
       <hr class="section-separator">
 
-      <section id="p_related-list">
+      <ul class="related-list">
+        <li>
+         <article class="related-item">
+           <h3 class="related-title">How to deal with IT recruiters</h3>
+           <img class="related-img" src="https://via.placeholder.com/200" alt="post image">
+         </article>
+        </li>
+
+        <li>
+          <article class="related-item">
+            <h3 class="related-title">How to deal with IT recruiters</h3>
+            <img class="related-img" src="https://via.placeholder.com/200" alt="post image">
+          </article>
+         </li>
+
+         <li>
+          <article class="related-item">
+            <h3 class="related-title">How to deal with IT recruiters</h3>
+            <img class="related-img" src="https://via.placeholder.com/200" alt="post image">
+          </article>
+         </li>
+
+         <li>
+          <article class="related-item">
+            <h3 class="related-title">How to deal with IT recruiters</h3>
+            <img class="related-img" src="https://via.placeholder.com/200" alt="post image">
+          </article>
+         </li>
+
+         <li>
+          <article class="related-item">
+            <h3 class="related-title">How to deal with IT recruiters</h3>
+            <img class="related-img" src="https://via.placeholder.com/200" alt="post image">
+          </article>
+         </li>
+
+         <li>
+          <article class="related-item">
+            <h3 class="related-title">How to deal with IT recruiters</h3>
+            <img class="related-img" src="https://via.placeholder.com/200" alt="post image">
+          </article>
+         </li>
+
+         <li>
+          <article class="related-item">
+            <h3 class="related-title">How to deal with IT recruiters</h3>
+            <img class="related-img" src="https://via.placeholder.com/200" alt="post image">
+          </article>
+         </li>
+
+         <li>
+          <article class="related-item">
+            <h3 class="related-title">How to deal with IT recruiters</h3>
+            <img class="related-img" src="https://via.placeholder.com/200" alt="post image">
+          </article>
+         </li>
         
-        <div class="p_related">
-          <h3 class="p_related-title">Other post</h3>
-          <img class="p_related-img" src="https://via.placeholder.com/150" alt="post image">
-        </div>
-
-        <div class="p_related">
-          <h3 class="p_related-title">Other post</h3>
-          <img class="p_related-img" src="https://via.placeholder.com/150" alt="post image">
-        </div>
-
-        <div class="p_related">
-          <h3 class="p_related-title">Other post</h3>
-          <img class="p_related-img" src="https://via.placeholder.com/150" alt="post image">
-        </div>
-
-        <div class="p_related">
-          <h3 class="p_related-title">Other post</h3>
-          <img class="" src="https://via.placeholder.com/150" alt="post image">
-        </div>
-
-        <div class="p_related">
-          <h3 class="p_related-title">Other post</h3>
-          <img class="p_related-img" src="https://via.placeholder.com/150" alt="post image">
-        </div>
-
-        <div class="p_related">
-          <h3 class="p_related-title">Other post</h3>
-          <img class="p_related-img" src="https://via.placeholder.com/150" alt="post image">
-        </div>
-
-        <div class="p_related">
-          <h3 class="p_related-title">Other post</h3>
-          <img class="p_related-img" src="https://via.placeholder.com/150" alt="post image">
-        </div>
-
-        <div class="p_related">
-          <h3 class="p_related-title">Other post</h3>
-          <img class="p_related-img" src="https://via.placeholder.com/150" alt="post image">
-        </div>
-
-        <div class="p_related">
-          <h3 class="p_related-title">Other post</h3>
-          <img class="p_related-img" src="https://via.placeholder.com/150" alt="post image">
-        </div>
-        
-     </section>
+      </ul>
     </section>
-    <hr class="section-separator">
-  </main>
 
-  <!-- F O O T E R -->
-  <footer id="footer">
+    <hr class="section-separator">
+
+    <!--  ==================== F O O T E R  ====================== -->
+   <footer id="footer" class="section-container">
     <div class="button-container">
       <button class="button">Contact me</button>
     </div>
     <span class="copyrights">Leniel Luzardo &copy 2020 | All rights reserved</span>
-  </footer>
-</div>
+   </footer>
+
+  </div>
+
+  </main>
+
+ 
 
 </div>
   <script src="./js/index.js"></script>
