@@ -505,7 +505,7 @@ html, body{
   overflow-y: scroll;
   height:  620px;
   max-height:  620px;
-  padding: 0;
+  padding: 10px;
   background: #FEFEFE;
 }
 .post_item-container{
@@ -515,11 +515,18 @@ html, body{
   grid-row-gap: 5px;
   padding: 10px;
   max-height: 90px;
-  margin:0;
+  margin:10px 0;
+  border: 2px  solid rgba(0, 68, 100, 0.8);
+  border-radius: 10px;
+}
+.post_item-container:hover{
+  cursor: pointer;
 }
 .post_item-img{
   grid-row: 1 / 4;
   grid-column: 1 /2;
+  max-width: 80px;
+  max-height: 80px;
 }
 .post_item-title{
   grid-row: 1 / 2;
@@ -546,6 +553,10 @@ html, body{
   height: 60px;
   border-radius: 5px;
   text-align: center;
+
+}
+.post_item-remove{
+  cursor:pointer;
 }
 .trash{
   display: block;
