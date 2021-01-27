@@ -225,16 +225,16 @@ html, body{
 .star-widget > input{
   display:none;
 }
-.star-widget label{
+.star-widget > label{
   font-size: 30px;
   color: #444;
   transition: all 0.2s ease;
 }
-input:not(:checked) ~ label:hover,
-input:not(:checked) ~ label:hover ~label {
+.star-widget > input:not(:checked) ~ label:hover,
+.star-widget > input:not(:checked) ~ label:hover ~ label {
   color:#fd4;
 }
-input:checked ~ label {
+.star-widget > input:checked ~ label {
   color: #fd4;
 }
 .about_author-container{
@@ -253,31 +253,31 @@ input:checked ~ label {
   margin: 30px 0;
 }
 
-
 /* <!-- --# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #-- -->
 /*<!-- =================== F O O T E R =================== --> */
 #footer {
+  display: block;
   text-align: center;
+  padding: 30px;
 }
 .copyrights{
-  display: inline-block;
+  display: block;
   font-size: .8em;
-  margin: 20px;
+  margin: 20px 0 0 0;
 }
 
 /* <!-- --# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #-- -->
  /*<!-- =================== C O N T A C T   F O R M =================== --> */
-#contact-container{
-  margin: 40px auto;
-  width: 100%;
-  height: 80%;
-  font-size: 1.1em;
+.contact_form-container{
+  display: flex;
+  justify-content: center;
+  margin:0;
+  height: 100%;
 }
-#contact{
+.contact_form{
   width: 100%;
-  display: block;
 }
- .f_lbl{
+.f_lbl{
   display: block;
   font-weight: bold;
   margin: 0 0 5px 0;
@@ -303,7 +303,10 @@ input:checked ~ label {
 .submit-container{
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 20px 0;
+}
+.submit-container > input {
+  width: 100%;
 }
 
 /* <!-- --# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #-- -->
@@ -316,6 +319,7 @@ input:checked ~ label {
 @media screen and (min-width:500px){
   .sections-container{
     width: 90%;
+    height: 100%;
   }
   #main-container{
     display: flex;
@@ -335,7 +339,6 @@ input:checked ~ label {
   .nav-item{
     font-size: 1.4em ;
   }
- 
   #p_title{
     margin: 30px 0;
   }
@@ -377,6 +380,9 @@ input:checked ~ label {
   .p_img-container{
     margin:40px 0;
   }
+  .contact_form{
+    width: 60%;
+  }
 }
 @media screen and (min-width:1300px){
     .about_author-container{
@@ -384,6 +390,10 @@ input:checked ~ label {
       grid-template: auto / auto auto;
       grid-gap: 20px;
       align-items: flex-start;
+    }
+    .contact_form{
+      width: 50%;
+    }
 }
 @media screen and (min-width: 1280px)  {
   body{
@@ -445,11 +455,6 @@ input:checked ~ label {
     scroll-snap-type:none;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  #contact-container{
-    width: 50%;
-    height: 100%;
-    font-size: 1.2em;
   }
 }
 @media screen and (min-width: 1500px){
